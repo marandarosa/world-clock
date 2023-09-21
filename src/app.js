@@ -1,4 +1,4 @@
-function alertDate(event) {
+/*function alertDate(event) {
   if (event.target.value === "paris") {
     let parisDate = moment
       .tz(`Europe/Paris`)
@@ -18,4 +18,4 @@ function alertDate(event) {
 }
 
 let selectedCity = document.querySelector(`#city`);
-selectedCity.addEventListener(`change`, alertDate);
+selectedCity.addEventListener(`change`, alertDate);*/
