@@ -1,21 +1,19 @@
-/*function alertDate(event) {
-  if (event.target.value === "paris") {
-    let parisDate = moment
-      .tz(`Europe/Paris`)
-      .format(`dddd, MMMM D, YYYY h:mm A`);
-    alert(`It is currently ${parisDate} in Europe/Paris`);
-  }
-  if (event.target.value === "tokyo") {
-    let tokyoDate = moment.tz(`Asia/Tokyo`).format(`dddd, MMMM D, YYYY h:mm A`);
-    alert(`It is currently ${tokyoDate} in Asia/Tokyo`);
-  }
-  if (event.target.value === "sydney") {
-    let sydneyDate = moment
-      .tz(`Australia/Sydney`)
-      .format(`dddd, MMMM D, YYYY h:mm A`);
-    alert(`It is currently ${sydneyDate} in Australia/Sydney`);
-  }
-}
+setInterval(function () {
+  let newYorkDate = document.querySelector(`#new-york`);
+  let newYorkDateElement = newYorkDate.querySelector(`.date`);
+  let newYorkTimeElement = newYorkDate.querySelector(`.time`);
+  let newYorkCurrent = moment.tz(`America/New_York`);
+  newYorkDateElement.innerHTML = newYorkCurrent.format(`MMMM Do, YYYY`);
+  newYorkTimeElement.innerHTML = newYorkCurrent.format(
+    `h:mm:ss [<small>]A[</small>]`
+  );
 
-let selectedCity = document.querySelector(`#city`);
-selectedCity.addEventListener(`change`, alertDate);*/
+  let lisbonDate = document.querySelector(`#lisbon`);
+  let lisbonDateElement = lisbonDate.querySelector(`.date`);
+  let lisbonTimeElement = lisbonDate.querySelector(`.time`);
+  let lisbonCurrent = moment.tz(`Europe/Lisbon`);
+  lisbonDateElement.innerHTML = lisbonCurrent.format(`MMMM Do, YYYY`);
+  lisbonTimeElement.innerHTML = lisbonCurrent.format(
+    `h:mm:ss [<small>]A[</small>]`
+  );
+}, 1000);
