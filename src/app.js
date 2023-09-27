@@ -20,6 +20,17 @@ setInterval(function () {
       `h:mm:ss [<small>]A[</small>]`
     );
   }
+
+  let aucklandDate = document.querySelector(`#auckland`);
+  if (aucklandDate) {
+    let aucklandDateElement = aucklandDate.querySelector(`.date`);
+    let aucklandTimeElement = aucklandDate.querySelector(`.time`);
+    let aucklandCurrent = moment.tz(`Pacific/Auckland`);
+    aucklandDateElement.innerHTML = aucklandCurrent.format(`MMMM Do, YYYY`);
+    aucklandTimeElement.innerHTML = aucklandCurrent.format(
+      `h:mm:ss [<small>]A[</small>]`
+    );
+  }
 }, 1000);
 
 function updateCity(event) {
@@ -27,6 +38,9 @@ function updateCity(event) {
     let cityTimeZone = event.target.value;
     if (cityTimeZone === "current") {
       cityTimeZone = moment.tz.guess();
+    }
+    if (cityTimeZone === "default") {
+      window.location = "/";
     }
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment.tz(cityTimeZone);
@@ -41,6 +55,7 @@ function updateCity(event) {
             `hh:mm:ss [<small>]A[</small>]`
           )}</div>
         </div>
+        <a href="/">Back to home page</a>
         `;
   }, 1000);
 }

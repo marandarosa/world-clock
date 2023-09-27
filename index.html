@@ -13,14 +13,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-    <title>World Clock</title>
+    <title>World Clock • Maranda Valentin</title>
   </head>
   <body>
     <div class="container">
       <h1>World Clock</h1>
 
       <select name="city-dropdown" id="city">
-        <option value="" selected>Select a city</option>
+        <option value="default" selected>Select a city</option>
         <option value="current">My Location</option>
         <option value="Pacific/Honolulu">Honolulu</option>
         <option value="Europe/London">London</option>
@@ -38,6 +38,13 @@
         <div class="city" id="lisbon">
           <div>
             <h3>Lisbon ⛪</h3>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+        <div class="city" id="auckland">
+          <div>
+            <h3>Auckland 🌋</h3>
             <div class="date"></div>
           </div>
           <div class="time"></div>

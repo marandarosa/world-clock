@@ -1,6 +1,11 @@
 body {
   padding: 50px;
-  background-color: rgb(255, 128, 232);
+  background: linear-gradient(
+    174.6deg,
+    rgb(252, 200, 191) 11.8%,
+    rgb(254, 159, 160) 89.9%
+  );
+  background-attachment: fixed;
 }
 .container {
   max-width: 500px;
